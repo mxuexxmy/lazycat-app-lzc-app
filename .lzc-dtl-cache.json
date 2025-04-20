@@ -1,0 +1,42 @@
+{
+  "name": "懒猫应用",
+  "package": "xyz.mxue.lazycatapp",
+  "description": "基于懒猫微服的接口进行开发的应用",
+  "homepage": "https://github.com/mxuexxmy/lazycat-app",
+  "author": "mxuexxmy",
+  "app_features": [
+    "public_path"
+  ],
+  "subdomain": "lazycatapp",
+  "version": "0.0.1",
+  "public_paths": [
+    "/"
+  ],
+  "iconPath": "logo.png",
+  "composePath": "docker-compose.yml",
+  "unsupported_platforms": [],
+  "lastRouteType": "from_compose",
+  "port_mappings": {
+    "frontend_8081_80": {
+      "use": true,
+      "type": "http",
+      "path": "/",
+      "targetPath": "/"
+    },
+    "backend_9999_8080": {
+      "use": false
+    }
+  },
+  "image_xxmymxue_lazycatapp-frontend_0.0.3": {
+    "originalImage": "xxmymxue/lazycatapp-frontend:0.0.3",
+    "pushTarget": "lazycat"
+  },
+  "image_xxmymxue_lazycatapp-backend_0.0.3": {
+    "originalImage": "xxmymxue/lazycatapp-backend:0.0.3",
+    "pushTarget": "none"
+  },
+  "backend_volume_/app/logs_action": "emptyDir",
+  "backend_volume_/app/logs_location": "app_data",
+  "backend_volume_/app/data_action": "emptyDir",
+  "backend_volume_/app/data_location": "app_data"
+}
