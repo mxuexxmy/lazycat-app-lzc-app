@@ -1,7 +1,7 @@
 lzc-sdk-version: "0.1"
 name: 懒猫应用
 package: xyz.mxue.lazycatapp
-version: 0.0.2
+version: 0.0.3
 description: 基于懒猫微服的接口进行开发的应用
 homepage: https://github.com/mxuexxmy/lazycat-app
 author: mxuexxmy
@@ -18,11 +18,11 @@ application:
     - /=http://frontend.xyz.mxue.lazycatapp.lzcapp:80/
 services:
   frontend:
-    image: registry.lazycat.cloud/mxuexxmy/xxmymxue/lazycatapp-frontend:b82091700e0d3e4b
+    image: registry.lazycat.cloud/mxuexxmy/xxmymxue/lazycatapp-frontend:23a844f6a054b362
     depends_on:
       - backend
   backend:
-    image: registry.lazycat.cloud/mxuexxmy/xxmymxue/lazycatapp-backend:7d4a543a5dfbef7f
+    image: registry.lazycat.cloud/mxuexxmy/xxmymxue/lazycatapp-backend:dd3eceea39fadfc8
     environment:
       - SPRING_PROFILES_ACTIVE=prod
     binds:
