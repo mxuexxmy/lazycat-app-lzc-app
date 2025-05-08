@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   frontend:
-    image: xxmymxue/lazycatapp-frontend:0.0.4
+    image: xxmymxue/lazycatapp-frontend:0.0.5
     ports:
       - "8081:80"
     depends_on:
@@ -11,7 +11,7 @@ services:
       - lazycat-app-network
 
   backend:
-    image: xxmymxue/lazycatapp-backend:0.0.4-fix
+    image: xxmymxue/lazycatapp-backend:0.0.5
     ports:
       - "9980:8080"
     environment:
